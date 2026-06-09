@@ -1,3 +1,3 @@
 # Поехали в Крым
 
-Готовая сборка из Google Drive для GitHub Pages. Загружать содержимое этой папки в корень репозитория.
+Liquid glass build with route status CTA in detail screen.
