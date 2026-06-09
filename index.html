@@ -17,19 +17,17 @@
   <body>
     <div id="root"></div>
     <script>
-      // Register service worker only in production-like environments.
-      // Localhost is intentionally excluded to avoid stale cache while developing.
-      if (
-        'serviceWorker' in navigator &&
-        !['localhost', '127.0.0.1'].includes(window.location.hostname)
-      ) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch(() => {
-            // PWA caching is optional. The app should still work without it.
-          });
-        });
+      // Clear old GitHub Pages/PWA caches from previous broken uploads.
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations()
+          .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+          .catch(() => {});
+      }
+      if ('caches' in window) {
+        caches.keys()
+          .then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+          .catch(() => {});
       }
     </script>
   </body>
 </html>
-
