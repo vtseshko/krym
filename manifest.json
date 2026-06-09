@@ -3,22 +3,21 @@
   "name": "Поехали в Крым — автомаршруты ЮБК",
   "icons": [
     {
-      "src": "./icon.svg",
+      "src": "/icon.svg",
       "type": "image/svg+xml",
       "sizes": "192x192 512x512",
       "purpose": "any"
     },
     {
-      "src": "./icon.svg",
+      "src": "/icon.svg",
       "type": "image/svg+xml",
       "sizes": "192x192 512x512",
       "purpose": "maskable"
     }
   ],
-  "start_url": "./",
+  "start_url": "/",
   "background_color": "#F4F1EA",
   "theme_color": "#2D5A27",
   "display": "standalone",
-  "orientation": "portrait",
-  "scope": "./"
+  "orientation": "portrait"
 }

@@ -1,9 +1,9 @@
 const CACHE_NAME = 'poehali-v-krym-cache-v1';
 const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './manifest.json',
-  './icon.svg'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icon.svg'
 ];
 
 self.addEventListener('install', (event) => {
@@ -49,7 +49,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       }).catch(() => {
         if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
+          return caches.match('/index.html');
         }
       });
     })
