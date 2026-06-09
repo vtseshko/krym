@@ -4,32 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Поехали в Крым — автомаршруты и путеводитель по ЮБК</title>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
     <meta name="theme-color" content="#2D5A27" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <script type="module" crossorigin src="/assets/index-GXaai7BB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C1WnhweJ.css">
+    <script type="module" crossorigin src="./assets/index-GXaai7BB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C1WnhweJ.css">
   </head>
   <body>
     <div id="root"></div>
     <script>
-      // Register service worker only in production-like environments.
-      // Localhost is intentionally excluded to avoid stale cache while developing.
       if (
         'serviceWorker' in navigator &&
         !['localhost', '127.0.0.1'].includes(window.location.hostname)
       ) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {
-            // PWA caching is optional. The app should still work without it.
-          });
+          navigator.serviceWorker.register('./sw.js').catch(() => {});
         });
       }
     </script>
   </body>
 </html>
-
